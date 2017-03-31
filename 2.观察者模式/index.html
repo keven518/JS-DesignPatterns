@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <script type="text/javascript">
+    ~(function () {
+      var o = $({});
+      $.jianting = function(){
+        o.on.apply(o,arguments);
+      }
+      $.fabu = function(){
+        o.trigger.apply(o,arguments);
+      }
+      $.qingchu = function(){
+        o.off.apply(o,arguments);
+      }
+    })();
+    $.jianting('/test/ls',function(e,a,b,c){
+      alert(a+'||'+b+'||'+c);
+    });
+    $.jianting('/test/ls',function(e,a,b,c){
+      alert('ok');
+    });
+    $.fabu('/test/ls', [1,2,3]);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

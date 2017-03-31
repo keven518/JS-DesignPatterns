@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(a,b){
+      $("input").select(function(){
+        alert(a+b);
+      });
+      $("button").click(function(){
+        $("input").trigger("select",['kj','cmm']);
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type="text" name="FirstName" value="Hello World" />
+<br />
+<button>激活 input 域的 select 事件</button>
+</body>
+</html>
